@@ -1,0 +1,15 @@
+"*":
+  core:
+    disabledPackages: [
+      "language-gfm"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontSize: 13
+    invisibles: {}
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "64ed6cd4-d6dc-9878-8eac-7fdab2ec8c94"
+  welcome:
+    showOnStartup: false
