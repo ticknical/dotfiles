@@ -1,0 +1,3 @@
+mikestead.dotenv
+MS-CEINTL.vscode-language-pack-ja
+shardulm94.trailing-spaces
