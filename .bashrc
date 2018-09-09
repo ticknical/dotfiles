@@ -8,27 +8,17 @@ alias ll="ls -al"
 # docker functions
 ##############################
 
-# Mount VM shared folders
-function __dockerMount()
+# initialize docker environment
+function __dockerInit()
 {
-    local readonly folders=('eclipse' 'git')
-    local          folder
-
-    docker-machine ssh $1 sudo modprobe vboxsf
-
-    for folder in "${folders[@]}"
-    do
-    if [[ $result -eq 0 ]]; then
-        docker-machine ssh $1 sudo mkdir -p /storage/$folder
-
-        if [[ $result -eq 0 ]]; then
-            docker-machine ssh $1 sudo mount -t vboxsf $folder /storage/$folder
-        fi
-    fi
-    done
+    # create cgroups directory
+    docker-machine ssh $1 '
+        sudo mkdir /sys/fs/cgroup/systemd;
+        sudo mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd;
+    ';
 }
 
-# Build docker image
+# build docker image
 function dbu()
 {
     docker build -t=$1 .;
@@ -40,7 +30,7 @@ function dex()
     docker exec -it $1 bash
 }
 
-# Using docker host switcher
+# using docker host switcher
 function docker-use()
 {
     eval "$(docker-machine env -u)"
@@ -54,7 +44,7 @@ function docker-dev::start()
     docker-machine start dev
     docker-use dev
 
-    __dockerMount dev
+    __dockerInit dev
 
     docker start nginx
 }
@@ -71,7 +61,7 @@ function docker-dev::ssh()
     docker-machine ssh dev
 }
 
-# Validate docker-dev subcommand impremented
+# validate docker-dev subcommand impremented
 function docker-dev::isSubcommand()
 {
     local readonly IMPREMENTED_SUBCOMMAND=('start' 'stop' 'ssh')
@@ -86,7 +76,7 @@ function docker-dev::isSubcommand()
     return 1
 }
 
-# Docker dev environment command
+# docker dev environment command
 function docker-dev()
 {
     docker-dev::isSubcommand $1
@@ -105,7 +95,7 @@ alias ddev='docker-dev'
 # vagrant functions
 ##############################
 
-# Validate vagrant-box subcommand impremented
+# validate vagrant-box subcommand impremented
 function vagrant-box::isSubcommand()
 {
     local readonly ALLOW_VAGRANT_SUBCOMMAND=('up' 'halt' 'destroy')
@@ -120,7 +110,7 @@ function vagrant-box::isSubcommand()
     return 1
 }
 
-# Validate vagrant-box box exist
+# validate vagrant-box box exist
 function vagrant-box::isBoxExist()
 {
     if [[ -e ${1}${2} ]]; then
@@ -130,7 +120,7 @@ function vagrant-box::isBoxExist()
     return 1
 }
 
-# Vagrant box wrapper command
+# vagrant box wrapper command
 function vagrant-box()
 {
     local readonly BEFORE_PWD=${PWD}
