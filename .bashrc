@@ -46,7 +46,7 @@ function docker-dev::start()
 
     __dockerInit dev
 
-    docker start nginx
+    docker start proxy
 }
 
 # docker-dev stop subcommand
