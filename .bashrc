@@ -55,6 +55,13 @@ function docker-dev::stop()
     docker-machine stop dev
 }
 
+# docker-dev restart subcommand
+function docker-dev::restart()
+{
+    docker-dev::stop
+    docker-dev::start
+}
+
 # docker-dev ssh subcommand
 function docker-dev::ssh()
 {
@@ -64,7 +71,7 @@ function docker-dev::ssh()
 # validate docker-dev subcommand impremented
 function docker-dev::isSubcommand()
 {
-    local readonly IMPREMENTED_SUBCOMMAND=('start' 'stop' 'ssh')
+    local readonly IMPREMENTED_SUBCOMMAND=('start' 'stop' 'restart' 'ssh')
 
     for subcommand in "${IMPREMENTED_SUBCOMMAND[@]}"
     do
