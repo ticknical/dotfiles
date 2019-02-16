@@ -5,6 +5,17 @@
 alias ll="ls -al"
 
 ##############################
+# backup functions
+##############################
+
+# backup develop workspace
+function dev-backup()
+{
+    local date=`date "+%Y%m%d%H%M%S"`
+    (cd ~/dev; tar cjf  ~/Dropbox/.dotfiles/dev/${date}.tar.bz2 --exclude='.DS_Store' *;)
+}
+
+##############################
 # docker functions
 ##############################
 
