@@ -1,5 +1,10 @@
 #!/bin/sh
 
-# create symlink to firefox preference directory
-ln -sfnv ${HOME}/Dropbox/.dotfiles/firefox/profiles.ini "${HOME}/Library/Application Support/Firefox/profiles.ini"
-ln -sfnv ${HOME}/Dropbox/.dotfiles/firefox/Profiles "${HOME}/Library/Application Support/Firefox/Profiles"
+# get file name latest firefox profile
+latest=`ls -1t ${HOME}/Dropbox/.dotfiles/firefox/*.tar.bz2 | head -1`
+
+# make firefox profile
+mkdir ${HOME}/Library/Application\ Support/Firefox
+
+# restore firefox profile
+(cd ${HOME}/Library/Application\ Support/Firefox; tar xjf ${latest};)
