@@ -15,6 +15,13 @@ function dev-backup()
     (cd ~/dev; tar cjf  ~/Dropbox/.dotfiles/dev/${date}.tar.bz2 --exclude='.DS_Store' *;)
 }
 
+# backup firefox profile
+function firefox-backup()
+{
+    local date=`date "+%Y%m%d%H%M%S"`
+    (cd ~/Library/Application\ Support/Firefox; tar cjf  ~/Dropbox/.dotfiles/firefox/${date}.tar.bz2 --exclude='.DS_Store' Profiles profiles.ini;)
+}
+
 ##############################
 # docker functions
 ##############################
