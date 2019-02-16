@@ -22,6 +22,13 @@ function firefox-backup()
     (cd ~/Library/Application\ Support/Firefox; tar cjf  ~/Dropbox/.dotfiles/firefox/${date}.tar.bz2 --exclude='.DS_Store' Profiles profiles.ini;)
 }
 
+# backup thunderbird profile
+function thunderbird-backup()
+{
+    local date=`date "+%Y%m%d%H%M%S"`
+    (cd ~/Library/Thunderbird; tar cjf  ~/Dropbox/.dotfiles/thunderbird/${date}.tar.bz2 --exclude='.DS_Store' Profiles profiles.ini;)
+}
+
 ##############################
 # docker functions
 ##############################
