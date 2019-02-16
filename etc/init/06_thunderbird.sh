@@ -1,5 +1,10 @@
 #!/bin/sh
 
-# create symlink to thunderbird preference directory
-ln -sfnv ${HOME}/Dropbox/.dotfiles/thunderbird/profiles.ini "${HOME}/Library/Thunderbird/profiles.ini"
-ln -sfnv ${HOME}/Dropbox/.dotfiles/thunderbird/Profiles "${HOME}/Library/Thunderbird/Profiles"
+# get file name latest thunderbird profile
+latest=`ls -1t ${HOME}/Dropbox/.dotfiles/thunderbird/*.tar.bz2 | head -1`
+
+# make thunderbird profile
+mkdir ${HOME}/Library/Thunderbird
+
+# restore thunderbird profile
+(cd ${HOME}/Library/Thunderbird; tar xjf ${latest};)
