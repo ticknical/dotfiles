@@ -69,6 +69,8 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "vlc"
 cask "xld"
+cask "neronplex/public/epson-px-049a-printer-driver"
+cask "neronplex/public/epson-px-049a-scanner-driver"
 cask "neronplex/public/font-ohruri"
 cask "shogogg/cask-atok/atok-passport"
 mas "Apple Configurator 2", id: 1037126344
