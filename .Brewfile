@@ -78,5 +78,5 @@ mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Simplenote", id: 692867256
-mas "SoraAnnai", id: 599799247
 mas "Tweetbot", id: 1384080005
+mas "そら案内", id: 599799247
