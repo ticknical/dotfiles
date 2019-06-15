@@ -69,6 +69,7 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "vlc"
 cask "xld"
+cask "zoomus"
 cask "neronplex/public/font-ohruri"
 cask "shogogg/cask-atok/atok-passport"
 mas "Apple Configurator 2", id: 1037126344
