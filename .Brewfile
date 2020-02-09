@@ -31,6 +31,7 @@ brew "packer"
 brew "peco"
 brew "ssh-copy-id"
 cask "1password"
+cask "atok"
 cask "atom"
 cask "authy"
 cask "bartender"
@@ -75,7 +76,6 @@ cask "neronplex/public/font-ohruri"
 cask "neronplex/public/jpki-client"
 cask "neronplex/public/myna-portal-ap"
 cask "neronplex/public/nttcom-acr1251cl-driver"
-cask "shogogg/cask-atok/atok-passport"
 mas "Evernote", id: 406056744
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
