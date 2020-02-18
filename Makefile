@@ -1,6 +1,6 @@
 DOTPATH           := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 DOTFILES_TARGET   := $(wildcard .??*)
-DOTFILES_EXCLUDES := .DS_Store .git
+DOTFILES_EXCLUDES := .DS_Store .git .github
 DOTFILES          := $(filter-out $(DOTFILES_EXCLUDES), $(DOTFILES_TARGET))
 
 .DEFAULT_GOAL := help
