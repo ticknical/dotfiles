@@ -26,7 +26,7 @@ brew "mas"
 brew "packer"
 brew "peco"
 brew "python"
-brew "ssh-copy-id"
+brew "ssh-copy-id", link: true
 brew "zplug"
 cask "1password"
 cask "atok"
