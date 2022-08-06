@@ -68,11 +68,16 @@ cask "visual-studio-code"
 cask "xld"
 cask "zoom"
 mas "Evernote", id: 406056744
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Spark", id: 1176895641
 mas "Speedtest", id: 1153157709
+mas "stts", id: 1187772509
 mas "Tweetbot", id: 1384080005
+mas "Twitter", id: 1482454543
+mas "ZIPANG", id: 882655968
 mas "そら案内", id: 599799247
