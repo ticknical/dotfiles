@@ -22,7 +22,6 @@ brew "libzip"
 brew "mas"
 brew "packer"
 brew "peco"
-brew "ssh-copy-id", link: true
 brew "zplug"
 cask "1password"
 cask "atom"
