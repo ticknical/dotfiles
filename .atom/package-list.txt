@@ -1,6 +1,0 @@
-docblockr@0.13.7
-language-dots@0.0.4
-language-markdown@0.26.0
-language-unix-shell@0.40.1
-markdown-writer@2.9.0
-
