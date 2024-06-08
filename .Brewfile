@@ -75,6 +75,7 @@ mas "Twitter", id: 1482454543
 mas "ZIPANG", id: 882655968
 mas "そら案内", id: 599799247
 vscode "amazonwebservices.aws-toolkit-vscode"
+vscode "astro-build.astro-vscode"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
 vscode "MS-CEINTL.vscode-language-pack-ja"
