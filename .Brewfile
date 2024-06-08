@@ -1,8 +1,6 @@
 tap "1password/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "ticknical/packages"
 brew "automake"
