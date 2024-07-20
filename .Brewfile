@@ -58,7 +58,6 @@ cask "townwifi"
 cask "visual-studio-code"
 cask "xld"
 cask "zoom"
-mas "1Password for Safari", id: 1569813296
 mas "Evernote", id: 406056744
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
