@@ -56,6 +56,7 @@ cask "sublime-text"
 cask "the-unarchiver"
 cask "townwifi"
 cask "visual-studio-code"
+cask "webstorm"
 cask "xld"
 cask "zoom"
 mas "Evernote", id: 406056744
