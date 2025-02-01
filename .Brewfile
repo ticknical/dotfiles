@@ -67,7 +67,7 @@ mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Reeder", id: 6475002485
-mas "Spark", id: 1176895641
+mas "Spark Desktop", id: 6445813049
 mas "Speedtest", id: 1153157709
 mas "stts", id: 1187772509
 mas "Twitter", id: 1482454543
