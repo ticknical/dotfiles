@@ -42,7 +42,6 @@ cask "google-cloud-sdk"
 cask "google-japanese-ime"
 cask "iina"
 cask "jpki-client"
-cask "kindle"
 cask "myna-portal-ap"
 cask "mysqlworkbench"
 cask "notion"
@@ -62,6 +61,7 @@ cask "xld"
 cask "zoom"
 mas "Evernote", id: 406056744
 mas "Keynote", id: 409183694
+mas "Kindle", id: 302584613
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
