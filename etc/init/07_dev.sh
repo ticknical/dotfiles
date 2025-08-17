@@ -1,7 +1,9 @@
 #!/bin/sh
 
+. ${HOME}/.dotfiles/etc/init/constants.sh
+
 # get file name latest develop workspace archive
-latest=`ls -1t ${HOME}/Dropbox/.dotfiles/dev/*.tar.bz2 | head -1`
+latest=`ls -1t "${GOOGLE_DRIVE_DIR}/.dotfiles/dev/*.tar.bz2" | head -1`
 
 # make develop workspace
 mkdir ${HOME}/dev
