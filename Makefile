@@ -1,6 +1,6 @@
 DOTPATH           := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 DOTFILES_TARGET   := $(wildcard .??*)
-DOTFILES_EXCLUDES := .DS_Store .git .github
+DOTFILES_EXCLUDES := .DS_Store .git .github .idea
 DOTFILES          := $(filter-out $(DOTFILES_EXCLUDES), $(DOTFILES_TARGET))
 
 .DEFAULT_GOAL := help
@@ -32,6 +32,18 @@ install:
 	@make update
 	@make deploy
 	@make init
+
+## Run workspace backup
+backup:
+	@echo '==> Start to backup dev workspace.'
+	@echo ''
+	DEST_DIR="$(HOME)/Google Drive/マイドライブ/.dotfiles/dev/"; \
+	BACKUP_FILE="$(DOTPATH)/$(shell date +%Y%m%d%H%M%S).tar.bz2"; \
+	[ -d "$$DEST_DIR" ] || mkdir -p "$$DEST_DIR"; \
+	tar cvjf "$$BACKUP_FILE" $(HOME)/dev/* && \
+	mv "$$BACKUP_FILE" "$$DEST_DIR"
+	@echo ''
+	@echo '==> Backup completed.'
 
 ## Self-documented Makefile
 help:
