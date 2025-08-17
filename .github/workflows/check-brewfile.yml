@@ -1,4 +1,4 @@
-name: CI
+name: Check Brewfile
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ jobs:
 
     - name: brew bundle install test
       run: |
-        MAS_APPS="$(cat ./.Brewfile | grep -v brew | grep mas | sed 's/^.*"\(.*\)".*$/\1/' | tr '\n' ' ')"
+        MAS_APPS="$(cat ./.Brewfile | grep -v brew | grep mas | sed 's/^.*"\(.*\)".*$/\1/' | tr '\n' ',')"
         export HOMEBREW_BUNDLE_MAS_SKIP="$MAS_APPS"
         export HOMEBREW_BUNDLE_BREW_SKIP="awscli go"
         brew bundle install --file ./.Brewfile
