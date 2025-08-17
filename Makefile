@@ -19,7 +19,7 @@ deploy:
 init:
 	@echo '==> Start to execute initialize scripts.'
 	@echo ''
-	@$(foreach val, $(wildcard $(DOTPATH)/etc/init/*.sh), echo "==> execute... [$(val)]"; bash $(val);)
+	@$(foreach val, $(wildcard $(DOTPATH)/etc/init/[0-9]*.sh), echo "==> execute... [$(val)]"; bash $(val);)
 
 ## Fetch changes for this repo
 update:
