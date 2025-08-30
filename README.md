@@ -1,6 +1,6 @@
 # dotfiles
 
-[![CI](https://github.com/ticknical/dotfiles/actions/workflows/main.yml/badge.svg)](https://github.com/ticknical/dotfiles/actions/workflows/main.yml)
+[![CI](https://github.com/ticknical/dotfiles/actions/workflows/test.yml/badge.svg)](https://github.com/ticknical/dotfiles/actions/workflows/test.yml)
 
 ## 概要
 macOS環境のセットアップ・管理用dotfilesリポジトリです。各種設定ファイルや初期化スクリプトを管理し、環境構築を自動化します。
