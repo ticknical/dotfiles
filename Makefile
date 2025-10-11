@@ -45,6 +45,18 @@ backup:
 	@echo ''
 	@echo '==> Backup completed.'
 
+## Run photo library backup
+backup-photo:
+	@echo '==> Start to backup photo library.'
+	@echo ''
+	DEST_DIR="$(HOME)/Google Drive/マイドライブ/etc/backup/photo/"; \
+	BACKUP_FILE="$(DOTPATH)/$(shell date +%Y%m%d%H%M%S).tar.bz2"; \
+	[ -d "$$DEST_DIR" ] || mkdir -p "$$DEST_DIR"; \
+	tar cvjf "$$BACKUP_FILE" $(HOME)/Pictures/* && \
+	mv "$$BACKUP_FILE" "$$DEST_DIR"
+	@echo ''
+	@echo '==> Backup completed.'
+
 ## Self-documented Makefile
 help:
 	@echo '       __      __  _____ __         '
