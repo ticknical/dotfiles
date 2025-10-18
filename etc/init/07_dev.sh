@@ -3,10 +3,18 @@
 . ${HOME}/.dotfiles/etc/init/constants.sh
 
 # get file name latest develop workspace archive
-latest=`ls -1t "${GOOGLE_DRIVE_DIR}/.dotfiles/dev/*.tar.bz2" | head -1`
+latest=$(find "${GOOGLE_DRIVE_DIR}/my/develop/backup/workspace" -type f -name "*.tar.bz2" -print0 \
+  | xargs -0 stat -f "%m %N" \
+  | sort -nr \
+  | head -1 \
+  | cut -d' ' -f2-)
 
 # make develop workspace
-mkdir ${HOME}/dev
+mkdir -p "${HOME}/dev"
 
 # restore develop workspace
-(cd ${HOME}/dev; tar xjf ${latest};)
+if [ -n "$latest" ]; then
+  (cd "${HOME}/dev" || exit; tar xjf "${latest}";)
+else
+  echo "Warning: Could not find a backup of the develop workspace. Skipping restore." >&2
+fi
