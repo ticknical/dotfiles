@@ -28,10 +28,10 @@ make install
     └── init/
         ├── 00_brew.sh
         ├── 01_google_drive.sh
-        ├── 02_ssh.sh
+        ├── 02_google_drive_symlink.sh
         ├── 03_atom.sh
         ├── 04_vscode.sh
-        ├── 07_dev.sh
+        ├── 07_restore_dev_workspace.sh
         └── constants.sh
 ```
 
