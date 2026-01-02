@@ -1,6 +1,4 @@
 tap "1password/tap"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "ticknical/packages"
 brew "automake"
 brew "awscli"
