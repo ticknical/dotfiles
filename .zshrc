@@ -1,3 +1,4 @@
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 export ZSHDOTDIR=~/.zsh
 
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
