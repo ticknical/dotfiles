@@ -1,4 +1,6 @@
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+export PIP_INDEX_URL=https://pypi.flatt.tech/simple/
+export UV_INDEX_URL=https://pypi.flatt.tech/simple/
 export ZSHDOTDIR=~/.zsh
 
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
