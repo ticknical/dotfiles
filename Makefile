@@ -57,6 +57,14 @@ backup-photo:
 	@echo ''
 	@echo '==> Backup completed.'
 
+## Export installed Homebrew packages to Brewfile
+brewfile:
+	@echo '==> Exporting Brewfile...'
+	@echo ''
+	brew bundle dump --file=$(DOTPATH)/.Brewfile --force
+	@echo ''
+	@echo '==> Brewfile exported to $(DOTPATH)/.Brewfile'
+
 ## Self-documented Makefile
 help:
 	@echo '       __      __  _____ __         '
@@ -72,4 +80,5 @@ help:
 	@echo 'install        : update, deploy, init を順に実行'
 	@echo 'backup         : devワークスペースのバックアップ'
 	@echo 'backup-photo   : 写真ライブラリのバックアップ'
+	@echo 'brewfile       : インストール済みHomebrewパッケージをBrewfileにエクスポート'
 	@echo 'help           : このヘルプを表示'
