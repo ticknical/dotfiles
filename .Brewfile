@@ -64,8 +64,6 @@ mas "そら案内", id: 599799247
 vscode "amazonwebservices.aws-toolkit-vscode"
 vscode "astro-build.astro-vscode"
 vscode "docker.docker"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
