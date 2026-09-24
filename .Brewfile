@@ -1,5 +1,5 @@
-tap "1password/tap"
-tap "ticknical/packages"
+tap "1password/tap", trusted: true
+tap "ticknical/packages", trusted: true
 brew "automake"
 brew "awscli"
 brew "bash"
