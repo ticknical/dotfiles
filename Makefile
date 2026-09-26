@@ -19,7 +19,7 @@ deploy:
 init:
 	@echo '==> Start to execute initialize scripts.'
 	@echo ''
-	@$(foreach val, $(wildcard $(DOTPATH)/etc/init/[0-9]*.sh), echo "==> execute... [$(val)]"; bash $(val);)
+	@$(foreach val, $(wildcard $(DOTPATH)/scripts/[0-9]*.sh), echo "==> execute... [$(val)]"; bash $(val);)
 
 ## Fetch changes for this repo
 update:
@@ -37,7 +37,7 @@ install:
 backup:
 	@echo '==> Start to backup dev workspace.'
 	@echo ''
-	. $(DOTPATH)/etc/init/constants.sh; \
+	. $(DOTPATH)/scripts/constants.sh; \
 	DEST_DIR="$${GOOGLE_DRIVE_DIR}/.dotfiles/dev/"; \
 	BACKUP_FILE="$(DOTPATH)/$(shell date +%Y%m%d%H%M%S).tar.bz2"; \
 	[ -d "$$DEST_DIR" ] || mkdir -p "$$DEST_DIR"; \
@@ -50,7 +50,7 @@ backup:
 backup-photo:
 	@echo '==> Start to backup photo library.'
 	@echo ''
-	. $(DOTPATH)/etc/init/constants.sh; \
+	. $(DOTPATH)/scripts/constants.sh; \
 	DEST_DIR="$${GOOGLE_DRIVE_DIR}/etc/backup/photo/"; \
 	BACKUP_FILE="$(DOTPATH)/$(shell date +%Y%m%d%H%M%S).tar.bz2"; \
 	[ -d "$$DEST_DIR" ] || mkdir -p "$$DEST_DIR"; \
