@@ -22,6 +22,12 @@ make install
 ## ディレクトリ構成
 ```
 .
+├── .Brewfile        # Homebrewパッケージ定義
+├── .config/         # 各種アプリの設定ファイル
+├── .npmrc
+├── .vscode/         # VSCodeの設定・キーバインド
+├── .zsh/            # zshのエイリアス・関数・Prezto設定
+├── .zshrc
 ├── Makefile
 ├── README.md
 └── etc/

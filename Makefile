@@ -37,7 +37,8 @@ install:
 backup:
 	@echo '==> Start to backup dev workspace.'
 	@echo ''
-	DEST_DIR="$(HOME)/Google Drive/マイドライブ/.dotfiles/dev/"; \
+	. $(DOTPATH)/etc/init/constants.sh; \
+	DEST_DIR="$${GOOGLE_DRIVE_DIR}/.dotfiles/dev/"; \
 	BACKUP_FILE="$(DOTPATH)/$(shell date +%Y%m%d%H%M%S).tar.bz2"; \
 	[ -d "$$DEST_DIR" ] || mkdir -p "$$DEST_DIR"; \
 	tar cvjf "$$BACKUP_FILE" $(HOME)/dev/* && \
@@ -49,7 +50,8 @@ backup:
 backup-photo:
 	@echo '==> Start to backup photo library.'
 	@echo ''
-	DEST_DIR="$(HOME)/Google Drive/マイドライブ/etc/backup/photo/"; \
+	. $(DOTPATH)/etc/init/constants.sh; \
+	DEST_DIR="$${GOOGLE_DRIVE_DIR}/etc/backup/photo/"; \
 	BACKUP_FILE="$(DOTPATH)/$(shell date +%Y%m%d%H%M%S).tar.bz2"; \
 	[ -d "$$DEST_DIR" ] || mkdir -p "$$DEST_DIR"; \
 	tar cvjf "$$BACKUP_FILE" $(HOME)/Pictures/* && \

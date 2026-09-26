@@ -15,7 +15,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'history' \
   'homebrew' \
-  'prompt'
+  'prompt' \
   'spectrum' \
   'terminal' \
   'utility' \

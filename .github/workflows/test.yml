@@ -16,3 +16,17 @@ jobs:
     - name: Run make and check output
       run: |
         make
+
+    - name: Deploy dotfiles via symlinks
+      run: make deploy
+
+    - name: Check zsh config files load without errors
+      run: |
+        for f in .zsh/*.zsh; do
+          echo "==> sourcing $f"
+          output=$(zsh -c "source $f" 2>&1)
+          if [ -n "$output" ]; then
+            echo "$output"
+            exit 1
+          fi
+        done
