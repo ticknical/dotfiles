@@ -30,15 +30,14 @@ make install
 ├── .zshrc
 ├── Makefile
 ├── README.md
-└── etc/
-    └── init/
-        ├── 00_brew.sh
-        ├── 01_google_drive.sh
-        ├── 02_google_drive_symlink.sh
-        ├── 03_atom.sh
-        ├── 04_vscode.sh
-        ├── 07_restore_dev_workspace.sh
-        └── constants.sh
+└── scripts/
+    ├── 00_brew.sh
+    ├── 01_google_drive.sh
+    ├── 02_google_drive_symlink.sh
+    ├── 03_atom.sh
+    ├── 04_vscode.sh
+    ├── 07_restore_dev_workspace.sh
+    └── constants.sh
 ```
 
 ## 依存関係

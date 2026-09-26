@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. ${HOME}/.dotfiles/etc/init/constants.sh
+. ${HOME}/.dotfiles/scripts/constants.sh
 
 # check if you have set up Google Drive
 while true; do

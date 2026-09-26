@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. ${HOME}/.dotfiles/etc/init/constants.sh
+. ${HOME}/.dotfiles/scripts/constants.sh
 
 # change private key permission
 find "${GOOGLE_DRIVE_DIR}/my/.dotfiles/.ssh/keys" -type f -name '*.pem' -exec chmod 0600 {} +
