@@ -107,7 +107,6 @@ mas "Pages", id: 409201541
 mas "Reeder", id: 6475002485
 mas "Spark Desktop", id: 6445813049
 mas "Speedtest", id: 1153157709
-mas "そら案内", id: 599799247
 vscode "amazonwebservices.aws-toolkit-vscode"
 vscode "astro-build.astro-vscode"
 vscode "docker.docker"
