@@ -51,6 +51,8 @@ cask "nikitabobko/tap/aerospace", trusted: true
 cask "antigravity"
 # Japanese input method editor (IME) produced by JustSystems
 cask "atok"
+# Menu bar icon organiser
+cask "bartender"
 # Managed desktop virtualization solution
 cask "citrix-workspace"
 # Anthropic's official Claude AI desktop app
@@ -77,8 +79,6 @@ cask "google-chrome"
 cask "google-drive"
 # Free and open-source media player
 cask "iina"
-# Menu bar manager
-cask "jordanbaird-ice"
 # Keyboard customiser
 cask "karabiner-elements"
 # App to write, plan, collaborate, and get organised
