@@ -1,4 +1,5 @@
 tap "1password/tap", trusted: true
+tap "jomatsu/tap"
 tap "nikitabobko/tap"
 tap "ticknical/packages", trusted: true
 # Tool for generating GNU Standards-compliant Makefiles
@@ -45,6 +46,8 @@ brew "zplug"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
+# AeroSpace companion with workspace switching, Exposé, and trackpad navigation
+cask "jomatsu/tap/aerokit", trusted: true
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace", trusted: true
 # Agent orchestration platform
